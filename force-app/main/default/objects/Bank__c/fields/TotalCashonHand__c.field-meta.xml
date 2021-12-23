@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TotalCashonHand__c</fullName>
+    <externalId>false</externalId>
+    <formula>X100Extended__c +
+ X50Extended__c +
+ X20Extended__c +
+ X10Extended__c +
+ X5Extended__c +
+ X2Extended__c +
+ X1Extended__c +
+ X025Extended__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total Cash on Hand</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

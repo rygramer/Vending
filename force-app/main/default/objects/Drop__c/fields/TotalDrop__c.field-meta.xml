@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TotalDrop__c</fullName>
+    <externalId>false</externalId>
+    <formula>X100__c * 100 +
+ X50__c * 50 +
+ X20__c * 20 +
+ X10__c * 10 +
+ X5__c * 5 +
+ X2__c * 2 +
+ X1__c * 1 +
+ X025__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total Drop</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>
