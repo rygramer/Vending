@@ -19,6 +19,18 @@
                 <behavior>Edit</behavior>
                 <field>Location__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>TotalSales__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>TotalDrops__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>BalanceDue__c</field>
+            </layoutItems>
         </layoutColumns>
         <style>OneColumn</style>
     </layoutSections>
@@ -35,10 +47,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>OwnerId</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>BalanceDue__c</field>
             </layoutItems>
         </layoutColumns>
         <layoutColumns>
@@ -92,7 +100,7 @@
     <relatedLists>
         <fields>NAME</fields>
         <fields>CREATED_DATE</fields>
-        <fields>TotalDrop__c</fields>
+        <fields>Value__c</fields>
         <relatedList>Drop__c.Vendor__c</relatedList>
         <sortField>CREATED_DATE</sortField>
         <sortOrder>Desc</sortOrder>

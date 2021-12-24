@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bank_Compact_Layout</fullName>
+    <fields>Location__c</fields>
+    <fields>TotalValueonHand__c</fields>
+    <fields>TotalStartingValue__c</fields>
+    <fields>TotalSales__c</fields>
+    <label>Bank Compact Layout</label>
+</CompactLayout>

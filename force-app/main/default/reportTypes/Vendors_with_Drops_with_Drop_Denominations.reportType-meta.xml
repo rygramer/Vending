@@ -1,160 +1,185 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
-    <baseObject>Event__c</baseObject>
+    <baseObject>Vendor__c</baseObject>
     <category>other</category>
     <deployed>true</deployed>
-    <description>Events with Locations with Location Banks</description>
+    <description>Vendors with Drops with Drop Denominations</description>
     <join>
         <join>
             <outerJoin>false</outerJoin>
-            <relationship>Banks__r</relationship>
+            <relationship>DropDenominations__r</relationship>
         </join>
         <outerJoin>false</outerJoin>
-        <relationship>Locations__r</relationship>
+        <relationship>Drops__r</relationship>
     </join>
-    <label>Events with Locations with Location Banks</label>
+    <label>Vendors with Drops with Drop Denominations</label>
     <sections>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Id</field>
-            <table>Event__c</table>
+            <table>Vendor__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Owner</field>
-            <table>Event__c</table>
+            <table>Vendor__c</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>Name</field>
-            <table>Event__c</table>
+            <table>Vendor__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>CreatedDate</field>
-            <table>Event__c</table>
+            <table>Vendor__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>CreatedBy</field>
-            <table>Event__c</table>
+            <table>Vendor__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>LastModifiedDate</field>
-            <table>Event__c</table>
+            <table>Vendor__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>LastModifiedBy</field>
-            <table>Event__c</table>
+            <table>Vendor__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>LastActivityDate</field>
-            <table>Event__c</table>
+            <table>Vendor__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Venue__c</field>
-            <table>Event__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Date__c</field>
-            <table>Event__c</table>
-        </columns>
-        <masterLabel>Events</masterLabel>
-    </sections>
-    <sections>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Id</field>
-            <table>Event__c.Locations__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>true</checkedByDefault>
-            <field>Name</field>
-            <table>Event__c.Locations__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>CreatedDate</field>
-            <table>Event__c.Locations__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>CreatedBy</field>
-            <table>Event__c.Locations__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>LastModifiedDate</field>
-            <table>Event__c.Locations__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>LastModifiedBy</field>
-            <table>Event__c.Locations__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>LastActivityDate</field>
-            <table>Event__c.Locations__r</table>
-        </columns>
-        <masterLabel>Locations</masterLabel>
-    </sections>
-    <sections>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Id</field>
-            <table>Event__c.Locations__r.Banks__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>true</checkedByDefault>
-            <field>Name</field>
-            <table>Event__c.Locations__r.Banks__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>CreatedDate</field>
-            <table>Event__c.Locations__r.Banks__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>CreatedBy</field>
-            <table>Event__c.Locations__r.Banks__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>LastModifiedDate</field>
-            <table>Event__c.Locations__r.Banks__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>LastModifiedBy</field>
-            <table>Event__c.Locations__r.Banks__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>LastActivityDate</field>
-            <table>Event__c.Locations__r.Banks__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>TotalValueonHand__c</field>
-            <table>Event__c.Locations__r.Banks__r</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>TotalStartingValue__c</field>
-            <table>Event__c.Locations__r.Banks__r</table>
+            <field>Account__c</field>
+            <table>Vendor__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>TotalSales__c</field>
-            <table>Event__c.Locations__r.Banks__r</table>
+            <table>Vendor__c</table>
         </columns>
-        <masterLabel>Banks</masterLabel>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Location__c</field>
+            <table>Vendor__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>TotalDrops__c</field>
+            <table>Vendor__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>BalanceDue__c</field>
+            <table>Vendor__c</table>
+        </columns>
+        <masterLabel>Vendors</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Id</field>
+            <table>Vendor__c.Drops__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>Vendor__c.Drops__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CreatedDate</field>
+            <table>Vendor__c.Drops__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CreatedBy</field>
+            <table>Vendor__c.Drops__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastModifiedDate</field>
+            <table>Vendor__c.Drops__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastModifiedBy</field>
+            <table>Vendor__c.Drops__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastActivityDate</field>
+            <table>Vendor__c.Drops__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Value__c</field>
+            <table>Vendor__c.Drops__r</table>
+        </columns>
+        <masterLabel>Drops</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Id</field>
+            <table>Vendor__c.Drops__r.DropDenominations__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>Vendor__c.Drops__r.DropDenominations__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CreatedDate</field>
+            <table>Vendor__c.Drops__r.DropDenominations__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CreatedBy</field>
+            <table>Vendor__c.Drops__r.DropDenominations__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastModifiedDate</field>
+            <table>Vendor__c.Drops__r.DropDenominations__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastModifiedBy</field>
+            <table>Vendor__c.Drops__r.DropDenominations__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastActivityDate</field>
+            <table>Vendor__c.Drops__r.DropDenominations__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Denomination__c</field>
+            <table>Vendor__c.Drops__r.DropDenominations__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Quantity__c</field>
+            <table>Vendor__c.Drops__r.DropDenominations__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>BankDenomination__c</field>
+            <table>Vendor__c.Drops__r.DropDenominations__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Value__c</field>
+            <table>Vendor__c.Drops__r.DropDenominations__r</table>
+        </columns>
+        <masterLabel>Drop Denominations</masterLabel>
     </sections>
 </ReportType>

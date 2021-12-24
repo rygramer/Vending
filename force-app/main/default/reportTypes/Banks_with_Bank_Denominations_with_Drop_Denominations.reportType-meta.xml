@@ -1,188 +1,211 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
-    <baseObject>Vendor__c</baseObject>
+    <baseObject>Bank__c</baseObject>
     <category>other</category>
     <deployed>true</deployed>
-    <description>Vendors with Loads with Load Products</description>
+    <description>Banks with Bank Denominations with Drop Denominations</description>
     <join>
         <join>
             <outerJoin>false</outerJoin>
-            <relationship>Load_Products__r</relationship>
+            <relationship>DropDenominations__r</relationship>
         </join>
         <outerJoin>false</outerJoin>
-        <relationship>Loads__r</relationship>
+        <relationship>BankDenominations__r</relationship>
     </join>
-    <label>Vendors with Loads with Load Products</label>
+    <label>Banks with Bank Denominations with Drop Denominations</label>
     <sections>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Id</field>
-            <table>Vendor__c</table>
+            <table>Bank__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Owner</field>
-            <table>Vendor__c</table>
+            <table>Bank__c</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>Name</field>
-            <table>Vendor__c</table>
+            <table>Bank__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>CreatedDate</field>
-            <table>Vendor__c</table>
+            <table>Bank__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>CreatedBy</field>
-            <table>Vendor__c</table>
+            <table>Bank__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>LastModifiedDate</field>
-            <table>Vendor__c</table>
+            <table>Bank__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>LastModifiedBy</field>
-            <table>Vendor__c</table>
+            <table>Bank__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>LastActivityDate</field>
-            <table>Vendor__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>Account__c</field>
-            <table>Vendor__c</table>
-        </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>TotalSales__c</field>
-            <table>Vendor__c</table>
+            <table>Bank__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Location__c</field>
-            <table>Vendor__c</table>
+            <table>Bank__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>TotalDrops__c</field>
-            <table>Vendor__c</table>
+            <field>TotalValueonHand__c</field>
+            <table>Bank__c</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>BalanceDue__c</field>
-            <table>Vendor__c</table>
+            <field>TotalStartingValue__c</field>
+            <table>Bank__c</table>
         </columns>
-        <masterLabel>Vendors</masterLabel>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>TotalSales__c</field>
+            <table>Bank__c</table>
+        </columns>
+        <masterLabel>Banks</masterLabel>
     </sections>
     <sections>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Id</field>
-            <table>Vendor__c.Loads__r</table>
+            <table>Bank__c.BankDenominations__r</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>Name</field>
-            <table>Vendor__c.Loads__r</table>
+            <table>Bank__c.BankDenominations__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>CreatedDate</field>
-            <table>Vendor__c.Loads__r</table>
+            <table>Bank__c.BankDenominations__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>CreatedBy</field>
-            <table>Vendor__c.Loads__r</table>
+            <table>Bank__c.BankDenominations__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>LastModifiedDate</field>
-            <table>Vendor__c.Loads__r</table>
+            <table>Bank__c.BankDenominations__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>LastModifiedBy</field>
-            <table>Vendor__c.Loads__r</table>
+            <table>Bank__c.BankDenominations__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>LastActivityDate</field>
-            <table>Vendor__c.Loads__r</table>
+            <table>Bank__c.BankDenominations__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Value__c</field>
-            <table>Vendor__c.Loads__r</table>
+            <field>Denomination__c</field>
+            <table>Bank__c.BankDenominations__r</table>
         </columns>
-        <masterLabel>Loads</masterLabel>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>StartingQuantity__c</field>
+            <table>Bank__c.BankDenominations__r</table>
+        </columns>
+        <masterLabel>Denominations</masterLabel>
     </sections>
     <sections>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Id</field>
-            <table>Vendor__c.Loads__r.Load_Products__r</table>
+            <table>Bank__c.BankDenominations__r.DropDenominations__r</table>
         </columns>
         <columns>
             <checkedByDefault>true</checkedByDefault>
             <field>Name</field>
-            <table>Vendor__c.Loads__r.Load_Products__r</table>
+            <table>Bank__c.BankDenominations__r.DropDenominations__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>CreatedDate</field>
-            <table>Vendor__c.Loads__r.Load_Products__r</table>
+            <table>Bank__c.BankDenominations__r.DropDenominations__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>CreatedBy</field>
-            <table>Vendor__c.Loads__r.Load_Products__r</table>
+            <table>Bank__c.BankDenominations__r.DropDenominations__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>LastModifiedDate</field>
-            <table>Vendor__c.Loads__r.Load_Products__r</table>
+            <table>Bank__c.BankDenominations__r.DropDenominations__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>LastModifiedBy</field>
-            <table>Vendor__c.Loads__r.Load_Products__r</table>
+            <table>Bank__c.BankDenominations__r.DropDenominations__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>LastActivityDate</field>
-            <table>Vendor__c.Loads__r.Load_Products__r</table>
+            <table>Bank__c.BankDenominations__r.DropDenominations__r</table>
         </columns>
-        <masterLabel>Products</masterLabel>
-    </sections>
-    <sections>
         <columns>
             <checkedByDefault>false</checkedByDefault>
-            <field>Product__c</field>
-            <table>Vendor__c.Loads__r.Load_Products__r</table>
+            <field>Denomination__c</field>
+            <table>Bank__c.BankDenominations__r.DropDenominations__r</table>
         </columns>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Quantity__c</field>
-            <table>Vendor__c.Loads__r.Load_Products__r</table>
+            <table>Bank__c.BankDenominations__r.DropDenominations__r</table>
         </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Drop__c</field>
+            <table>Bank__c.BankDenominations__r.DropDenominations__r</table>
+        </columns>
+        <masterLabel>Drops</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>AcquiredQuantity__c</field>
+            <table>Bank__c.BankDenominations__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>StartingValue__c</field>
+            <table>Bank__c.BankDenominations__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>TotalValue__c</field>
+            <table>Bank__c.BankDenominations__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>TotalQuantity__c</field>
+            <table>Bank__c.BankDenominations__r</table>
+        </columns>
+        <masterLabel>Bank Denominations</masterLabel>
+    </sections>
+    <sections>
         <columns>
             <checkedByDefault>false</checkedByDefault>
             <field>Value__c</field>
-            <table>Vendor__c.Loads__r.Load_Products__r</table>
+            <table>Bank__c.BankDenominations__r.DropDenominations__r</table>
         </columns>
-        <columns>
-            <checkedByDefault>false</checkedByDefault>
-            <field>UnitPrice__c</field>
-            <table>Vendor__c.Loads__r.Load_Products__r</table>
-        </columns>
-        <masterLabel>Load Products</masterLabel>
+        <masterLabel>Drop Denominations</masterLabel>
     </sections>
 </ReportType>

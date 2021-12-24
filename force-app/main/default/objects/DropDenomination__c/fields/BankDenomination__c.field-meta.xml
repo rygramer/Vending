@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Product__c</fullName>
+    <fullName>BankDenomination__c</fullName>
     <externalId>false</externalId>
-    <label>Product</label>
-    <referenceTo>LocationProduct__c</referenceTo>
-    <relationshipLabel>Loads</relationshipLabel>
-    <relationshipName>LoadProducts</relationshipName>
+    <label>Bank Denomination</label>
+    <referenceTo>BankDenomenation__c</referenceTo>
+    <relationshipLabel>Drops</relationshipLabel>
+    <relationshipName>DropDenominations</relationshipName>
     <relationshipOrder>1</relationshipOrder>
     <reparentableMasterDetail>false</reparentableMasterDetail>
     <trackHistory>false</trackHistory>

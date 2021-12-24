@@ -3,16 +3,20 @@
     <baseObject>Event__c</baseObject>
     <category>other</category>
     <deployed>true</deployed>
-    <description>Events with Locations with Location Banks</description>
+    <description>Events with Locations with Banks with Bank Denominations</description>
     <join>
         <join>
+            <join>
+                <outerJoin>false</outerJoin>
+                <relationship>BankDenominations__r</relationship>
+            </join>
             <outerJoin>false</outerJoin>
             <relationship>Banks__r</relationship>
         </join>
         <outerJoin>false</outerJoin>
         <relationship>Locations__r</relationship>
     </join>
-    <label>Events with Locations with Location Banks</label>
+    <label>Events with Locations with Banks with Bank Denominations</label>
     <sections>
         <columns>
             <checkedByDefault>false</checkedByDefault>
@@ -156,5 +160,76 @@
             <table>Event__c.Locations__r.Banks__r</table>
         </columns>
         <masterLabel>Banks</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Id</field>
+            <table>Event__c.Locations__r.Banks__r.BankDenominations__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>Event__c.Locations__r.Banks__r.BankDenominations__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CreatedDate</field>
+            <table>Event__c.Locations__r.Banks__r.BankDenominations__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>CreatedBy</field>
+            <table>Event__c.Locations__r.Banks__r.BankDenominations__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastModifiedDate</field>
+            <table>Event__c.Locations__r.Banks__r.BankDenominations__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastModifiedBy</field>
+            <table>Event__c.Locations__r.Banks__r.BankDenominations__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>LastActivityDate</field>
+            <table>Event__c.Locations__r.Banks__r.BankDenominations__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Denomination__c</field>
+            <table>Event__c.Locations__r.Banks__r.BankDenominations__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>StartingQuantity__c</field>
+            <table>Event__c.Locations__r.Banks__r.BankDenominations__r</table>
+        </columns>
+        <masterLabel>Denominations</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>AcquiredQuantity__c</field>
+            <table>Event__c.Locations__r.Banks__r.BankDenominations__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>StartingValue__c</field>
+            <table>Event__c.Locations__r.Banks__r.BankDenominations__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>TotalValue__c</field>
+            <table>Event__c.Locations__r.Banks__r.BankDenominations__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>TotalQuantity__c</field>
+            <table>Event__c.Locations__r.Banks__r.BankDenominations__r</table>
+        </columns>
+        <masterLabel>Bank Denominations</masterLabel>
     </sections>
 </ReportType>

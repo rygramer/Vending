@@ -153,14 +153,14 @@
     <enableSharing>true</enableSharing>
     <enableStreamingApi>true</enableStreamingApi>
     <externalSharingModel>ControlledByParent</externalSharingModel>
-    <label>Load Product</label>
+    <label>Drop Denomination</label>
     <nameField>
-        <displayFormat>LP-{0000}</displayFormat>
+        <displayFormat>DD-{0000}</displayFormat>
         <label>Number</label>
         <trackHistory>false</trackHistory>
         <type>AutoNumber</type>
     </nameField>
-    <pluralLabel>Load Products</pluralLabel>
+    <pluralLabel>Drop Denominations</pluralLabel>
     <searchLayouts/>
     <sharingModel>ControlledByParent</sharingModel>
     <visibility>Public</visibility>

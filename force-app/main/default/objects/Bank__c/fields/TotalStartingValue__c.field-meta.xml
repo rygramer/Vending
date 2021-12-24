@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>TotalDrops__c</fullName>
+    <fullName>TotalStartingValue__c</fullName>
     <externalId>false</externalId>
-    <label>Total Drops</label>
-    <summarizedField>Drop__c.Value__c</summarizedField>
-    <summaryForeignKey>Drop__c.Vendor__c</summaryForeignKey>
+    <label>Total Starting Value</label>
+    <summarizedField>BankDenomenation__c.StartingValue__c</summarizedField>
+    <summaryForeignKey>BankDenomenation__c.Bank__c</summaryForeignKey>
     <summaryOperation>sum</summaryOperation>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>

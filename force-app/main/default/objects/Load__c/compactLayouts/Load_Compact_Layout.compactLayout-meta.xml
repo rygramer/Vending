@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Load_Compact_Layout</fullName>
+    <fields>Vendor__c</fields>
+    <fields>CreatedById</fields>
+    <fields>Value__c</fields>
+    <label>Load Compact Layout</label>
+</CompactLayout>

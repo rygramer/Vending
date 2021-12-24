@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>Product__c</fullName>
+    <fullName>Drop__c</fullName>
     <externalId>false</externalId>
-    <label>Product</label>
-    <referenceTo>LocationProduct__c</referenceTo>
-    <relationshipLabel>Loads</relationshipLabel>
-    <relationshipName>LoadProducts</relationshipName>
-    <relationshipOrder>1</relationshipOrder>
+    <label>Drop</label>
+    <referenceTo>Drop__c</referenceTo>
+    <relationshipLabel>Drop Denominations</relationshipLabel>
+    <relationshipName>DropDenominations</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
     <reparentableMasterDetail>false</reparentableMasterDetail>
     <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
