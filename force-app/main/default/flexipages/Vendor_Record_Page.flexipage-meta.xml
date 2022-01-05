@@ -32,6 +32,11 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
+                <componentName>newLoad</componentName>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
                 <componentInstanceProperties>
                     <name>parentFieldApiName</name>
                     <value>Vendor__c.Id</value>

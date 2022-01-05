@@ -1,3 +1,31 @@
 <template>
-    
+    <!-- <lightning-spinner alternative-text="Loading..." size="small" if:true={isLoading}></lightning-spinner> -->
+    <lightning-layout multiple-rows="true">
+        <lightning-layout-item padding="around-small">
+            <lightning-card title="New Load">
+                <!-- sldsValidatorIgnoreNextLine -->
+                <lightning-datatable
+                    key-field="productId"    
+                    data={newLoadData}
+                    columns={newLoadColumns}
+                    onsave={handleSave}
+                    draft-values={draftValues}
+                    hide-checkbox-column="true"
+                    is-loading={isLoading}>
+                </lightning-datatable>
+            </lightning-card>
+        </lightning-layout-item>
+        <lightning-layout-item padding="around-small">
+            <lightning-card title="Existing Loads">
+                <!-- sldsValidatorIgnoreNextLine -->
+                <lightning-datatable
+                    key-field="Id"    
+                    data={existingLoadData}
+                    columns={existingLoadColumns}
+                    hide-checkbox-column="true"
+                    show-row-number-column="true">
+                </lightning-datatable>
+            </lightning-card>
+        </lightning-layout-item>
+    </lightning-layout>
 </template>
