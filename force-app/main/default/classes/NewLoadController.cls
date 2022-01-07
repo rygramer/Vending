@@ -2,14 +2,13 @@ public with sharing class NewLoadController {
     @AuraEnabled(cacheable=true)
     public static List<LoadProduct> getProducts(Id locationId){
         List<LoadProduct> loadProducts = new List<LoadProduct>();
-        for(LocationProduct__c locationProduct : [SELECT Id, Name, UnitPrice__c FROM LocationProduct__c WHERE Location__c = :locationId]){
+        for(LocationProduct__c locationProduct : [SELECT Id, Name, UnitPrice__c FROM LocationProduct__c WHERE Location__c = :locationId ORDER BY UnitPrice__c]){
             LoadProduct loadProduct = new LoadProduct(
                 locationProduct.Id,
                 locationProduct.Name,
                 locationProduct.UnitPrice__c,
                 0
             );
-            system.debug(loadProduct);
             loadProducts.add(loadProduct);
         }
         return loadProducts;

@@ -1,5 +1,5 @@
 <template>
-    <!-- <lightning-spinner alternative-text="Loading..." size="small" if:true={isLoading}></lightning-spinner> -->
+    <lightning-spinner alternative-text="Loading..." size="small" if:true={isLoading}></lightning-spinner>
     <lightning-layout multiple-rows="true">
         <lightning-layout-item padding="around-small">
             <lightning-card title="New Load">
@@ -11,7 +11,7 @@
                     onsave={handleSave}
                     draft-values={draftValues}
                     hide-checkbox-column="true"
-                    is-loading={isLoading}>
+                    resize-column-disabled="true">
                 </lightning-datatable>
             </lightning-card>
         </lightning-layout-item>
@@ -23,7 +23,8 @@
                     data={existingLoadData}
                     columns={existingLoadColumns}
                     hide-checkbox-column="true"
-                    show-row-number-column="true">
+                    show-row-number-column="true"
+                    resize-column-disabled="true">
                 </lightning-datatable>
             </lightning-card>
         </lightning-layout-item>
