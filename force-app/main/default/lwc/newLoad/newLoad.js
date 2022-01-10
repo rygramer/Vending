@@ -1,5 +1,5 @@
-import { LightningElement, api, wire, track } from 'lwc';
-import { getRecord, getRecordNotifyChange } from 'lightning/uiRecordApi';
+import { LightningElement, api, wire } from 'lwc';
+import { getRecord, getRecordNotifyChange, deleteRecord } from 'lightning/uiRecordApi';
 import { refreshApex } from '@salesforce/apex';
 
 import getProducts from '@salesforce/apex/NewLoadController.getProducts';
@@ -9,7 +9,7 @@ import getLoads from '@salesforce/apex/NewLoadController.getLoads';
 const newLoadColumns = [
     {
         label: 'Product',
-        fieldName: 'name',
+        fieldName: 'rowName',
         type: 'text'
     },
     {
@@ -25,34 +25,42 @@ const newLoadColumns = [
     }
 ];
 
+const existingLoadActions = [
+    {
+        label: 'Delete',
+        name: 'delete'
+    }
+]
+
 const existingLoadColumns = [
     { 
-        label: 'Number',
+        label: 'Time',
         fieldName: 'idUrl',
         type: 'url',
         typeAttributes: {
-            label: { fieldName: 'Name' }
-        }
-    },
-    { 
-        label: 'Created Date', 
-        fieldName: 'CreatedDate', 
-        type: 'date',
-        typeAttributes: {
-            day: 'numeric',
-            month: 'short',
-            year: 'numeric',
-            hour: '2-digit',
-            minute: '2-digit',
-            hour12: true
+            label: { fieldName: 'rowName' }
         }
     },
     {
+        label: 'Quantity',
+        fieldName: 'quantity',
+        type: 'number'
+    },
+    {
         label: 'Value',
-        fieldName: 'Value__c',
+        fieldName: 'value',
         type: 'currency'
+    },
+    {
+        type: 'action',
+        typeAttributes: {
+            rowActions: existingLoadActions,
+            menuAlignment: 'right'
+        }
     }
+
 ];
+
 
 
 export default class NewLoad extends LightningElement {
@@ -84,10 +92,21 @@ export default class NewLoad extends LightningElement {
         let {data,error} = value;
         if(data){
             let idUrl;
-            this.existingLoadData = data.map(row => {
-                idUrl = `/${row.Id}`;
+            let loads = data.map(row => {
+                idUrl = `/${row.rowId}`;
                 return {...row, idUrl}
             })
+
+            loads = JSON.parse(JSON.stringify(loads));
+
+            for(let i = 0; i < loads.length; i++){
+                loads[i]._children = loads[i]['loadProducts'].map(row => {
+                    idUrl = `/${row.rowId}`;
+                    return {...row, idUrl}
+                })
+            }
+
+            this.existingLoadData = loads;
         }
     }
 
@@ -105,5 +124,15 @@ export default class NewLoad extends LightningElement {
             refreshApex(this.refreshExistingLoadData);
             this.isLoading = false;
         })
+    }
+
+    handleRowAction(event) {
+        let action = event.detail.action;
+        switch (action.name) {
+            case 'delete':
+                deleteRecord(event.detail.row.rowId);   
+        }
+        getRecordNotifyChange([{recordId: this.recordId}]);
+        refreshApex(this.refreshExistingLoadData);
     }
 }

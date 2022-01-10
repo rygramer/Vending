@@ -5,7 +5,7 @@
             <lightning-card title="New Load">
                 <!-- sldsValidatorIgnoreNextLine -->
                 <lightning-datatable
-                    key-field="productId"    
+                    key-field="rowId"    
                     data={newLoadData}
                     columns={newLoadColumns}
                     onsave={handleSave}
@@ -18,14 +18,15 @@
         <lightning-layout-item padding="around-small">
             <lightning-card title="Existing Loads">
                 <!-- sldsValidatorIgnoreNextLine -->
-                <lightning-datatable
-                    key-field="Id"    
+                <lightning-tree-grid
+                    key-field="rowId"    
                     data={existingLoadData}
                     columns={existingLoadColumns}
+                    onrowaction={handleRowAction}
                     hide-checkbox-column="true"
-                    show-row-number-column="true"
+                    show-row-number-column="false"
                     resize-column-disabled="true">
-                </lightning-datatable>
+                </lightning-tree-grid>
             </lightning-card>
         </lightning-layout-item>
     </lightning-layout>
